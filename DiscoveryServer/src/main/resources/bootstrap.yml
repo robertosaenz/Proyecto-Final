@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    config:
+      name: discovery
+      uri: http://localhost:8084
+      username: root
+      password: p4ssword
+#server:
+#  port: 8761
+#eureka:
+#  client:
+#    register-with-eureka: false
+#    fetch-registry: false

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AccountBankService/AccountBankService.iml" filepath="$PROJECT_DIR$/AccountBankService/AccountBankService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BootcoinBankService/BootcoinBankService.iml" filepath="$PROJECT_DIR$/BootcoinBankService/BootcoinBankService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CreditBankService/CreditBankService.iml" filepath="$PROJECT_DIR$/CreditBankService/CreditBankService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CustomerBankService/CustomerBankService.iml" filepath="$PROJECT_DIR$/CustomerBankService/CustomerBankService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProjectBankMicroservices.iml" filepath="$PROJECT_DIR$/ProjectBankMicroservices.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WalletBankService/WalletBankService.iml" filepath="$PROJECT_DIR$/WalletBankService/WalletBankService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base-domains/base-domains.iml" filepath="$PROJECT_DIR$/base-domains/base-domains.iml" />
+    </modules>
+  </component>
+</project>

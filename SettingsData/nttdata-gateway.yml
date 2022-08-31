@@ -1,0 +1,23 @@
+server:
+  port: 8088
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: nttdata-AccountBankService
+          uri: lb://nttdata-AccountBankService
+          predicates:
+            - Path=/accountbank/**
+        - id: micro02
+          uri: lb://micro02
+          predicates:
+            - Path=/afp/**

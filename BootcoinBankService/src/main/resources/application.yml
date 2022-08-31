@@ -1,0 +1,12 @@
+server:
+  port: 7000
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/BootcoinBank
+  kafka:
+    producer:
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+    topic:
+      name: transaction_topics

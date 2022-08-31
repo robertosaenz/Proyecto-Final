@@ -1,0 +1,17 @@
+server:
+    port: 7001
+spring:
+    kafka:
+        consumer:
+            auto-offset-reset: earliest
+            bootstrap-servers: localhost:9092
+            group-id: wallet
+            key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+            properties:
+                spring:
+                    json:
+                        trusted:
+                            packages: '*'
+            value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+        topic:
+            name: transaction_topics

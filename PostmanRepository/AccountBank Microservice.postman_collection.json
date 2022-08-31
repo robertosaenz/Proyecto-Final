@@ -1,0 +1,219 @@
+{
+	"info": {
+		"_postman_id": "6d72c85a-24fa-4361-99c9-b026ed47208d",
+		"name": "AccountBank Microservice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Account Bank",
+			"item": [
+				{
+					"name": "Saving",
+					"item": []
+				},
+				{
+					"name": "FixedTerm",
+					"item": []
+				},
+				{
+					"name": "Common",
+					"item": []
+				},
+				{
+					"name": "Create by type",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerBankDto\":\r\n    {\r\n        \"name\":\"demo ahorro\",\r\n        \"identDoc\":\"9876\",\r\n        \"customerType\":\"personal\"\r\n    },\r\n    \"commonAccountBank\":\r\n    {\r\n        \"balance\":150.0,\r\n        \"transactions\":[\"r\",\"t\"]\r\n    },\r\n    \"listCommonAccountBank\":\r\n    [\r\n            {\r\n                \"balance\":19.0,\r\n                \"transactions\":[\"dj\",\"g\"]\r\n            },\r\n            {\r\n                \"balance\":19.0,\r\n                \"transactions\":[\"f\",\"g\"]\r\n            }\r\n    ],\r\n    \"savingAccountBank\":\r\n    {\r\n        \"balance\":13.0,\r\n        \"transactions\":[\"d\",\"e\"]\r\n\r\n    },\r\n    \"fixedTermAccountBank\":\r\n    {\r\n        \"balance\":13.0,\r\n        \"transactions\":[\"e\",\"f\"]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1001/api/accountbank/ahorro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1001",
+							"path": [
+								"api",
+								"accountbank",
+								"ahorro"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transaction Bank",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1001/api/accountbank/transaction",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1001",
+							"path": [
+								"api",
+								"accountbank",
+								"transaction"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1001/api/accountbank/transaction/62fc03157cf7f34c907884ff",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1001",
+							"path": [
+								"api",
+								"accountbank",
+								"transaction",
+								"62fc03157cf7f34c907884ff"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"123\",\r\n    \"type\":\"Deposito\",\r\n    \"amount\":\"69\",\r\n    \"transactionDate\":\"fecha\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1001/api/accountbank/transaction/62fc03157cf7f34c907884ff",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1001",
+							"path": [
+								"api",
+								"accountbank",
+								"transaction",
+								"62fc03157cf7f34c907884ff"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1001/api/accountbank/transaction/62fc03157cf7f34c907884ff",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1001",
+							"path": [
+								"api",
+								"accountbank",
+								"transaction",
+								"62fc03157cf7f34c907884ff"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Withdrawal",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountBankType\":\"ahorro\",\r\n    \"accountBankId\": \"62fc02ef7cf7f34c907884fe\",\r\n    \"amount\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1001/api/accountbank/transaction/withdrawal",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1001",
+							"path": [
+								"api",
+								"accountbank",
+								"transaction",
+								"withdrawal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Deposit",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountBankType\":\"ahorro\",\r\n    \"accountBankId\": \"62fc02ef7cf7f34c907884fe\",\r\n    \"amount\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1001/api/accountbank/transaction/deposit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1001",
+							"path": [
+								"api",
+								"accountbank",
+								"transaction",
+								"deposit"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,23 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/robertosaenz/Proyecto-2.git
+          searchPaths: SettingsData
+          username: robertosaenz
+          password: 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
+  security:
+    user:
+      name: root
+      password: p4ssword
+eureka:
+  client:
+    region: default
+    service-url:
+      default-zone: http://localhost:8761/eureka/
+    registry-fetch-interval-seconds: 5

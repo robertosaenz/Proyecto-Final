@@ -1,0 +1,43 @@
+spring:
+  cloud:
+    config:
+      name: accountbank
+      discovery:
+        enabled: true
+        service-id: config
+      username: root
+      password: p4ssword
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/AccountBank
+#eureka:
+#  client:
+#    register-with-eureka: true
+#    fetch-registry: true
+#    service-url:
+#      default-zone: http://localhost:8761/eureka/
+#spring:
+#  cloud:
+#    config:
+#      name: accountbank
+#      discovery:
+#        enabled: true
+#        service-id: config
+#  data:
+#    mongodb:
+#      uri: mongodb://localhost:27017/AccountBank
+#eureka:
+#  client:
+#    register-with-eureka: true
+#    fetch-registry: true
+#    service-url:
+#      default-zone: http://localhost:8761/eureka/
+
+#customer-bank:
+#    uri: http://localhost:1000/api/
+#server:
+#    port: 1001
+#spring:
+#    data:
+#        mongodb:
+#            uri: mongodb://localhost:27017/AccountBank
