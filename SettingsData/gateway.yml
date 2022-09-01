@@ -13,11 +13,7 @@ spring:
         locator:
           enabled: true
       routes:
-        - id: nttdata-AccountBankService
-          uri: lb://nttdata-AccountBankService
+        - id: accountbank
+          uri: lb://accountbank
           predicates:
             - Path=/accountbank/**
-        - id: micro02
-          uri: lb://micro02
-          predicates:
-            - Path=/afp/**

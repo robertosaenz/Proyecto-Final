@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/CreditBankService/CreditBankService.iml" filepath="$PROJECT_DIR$/CreditBankService/CreditBankService.iml" />
       <module fileurl="file://$PROJECT_DIR$/CustomerBankService/CustomerBankService.iml" filepath="$PROJECT_DIR$/CustomerBankService/CustomerBankService.iml" />
       <module fileurl="file://$PROJECT_DIR$/DiscoveryServer/DiscoveryServer.iml" filepath="$PROJECT_DIR$/DiscoveryServer/DiscoveryServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Gateway/Gateway.iml" filepath="$PROJECT_DIR$/Gateway/Gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/ProjectBankMicroservices.iml" filepath="$PROJECT_DIR$/ProjectBankMicroservices.iml" />
       <module fileurl="file://$PROJECT_DIR$/WalletBankService/WalletBankService.iml" filepath="$PROJECT_DIR$/WalletBankService/WalletBankService.iml" />
       <module fileurl="file://$PROJECT_DIR$/base-domains/base-domains.iml" filepath="$PROJECT_DIR$/base-domains/base-domains.iml" />

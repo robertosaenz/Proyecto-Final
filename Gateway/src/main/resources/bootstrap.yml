@@ -1,6 +1,6 @@
 spring:
   application:
-    name: nttdata-gateway
+    name: gateway
   cloud:
     config:
       uri: http://localhost:8084

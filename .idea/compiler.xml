@@ -10,6 +10,7 @@
         <module name="base-domains" />
         <module name="DiscoveryServer" />
         <module name="CreditBankService" />
+        <module name="Gateway" />
         <module name="AccountBankService" />
         <module name="BootcoinBankService" />
         <module name="ConfigServer" />
@@ -26,6 +27,7 @@
       <module name="CustomerBankService" target="1.8" />
       <module name="DiscoveryServer" target="1.8" />
       <module name="DiscoveryServerBankService" target="1.8" />
+      <module name="Gateway" target="1.8" />
       <module name="WalletBankService" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -38,6 +40,7 @@
       <module name="CustomerBankService" options="-parameters" />
       <module name="DiscoveryServer" options="-parameters" />
       <module name="DiscoveryServerBankService" options="-parameters" />
+      <module name="Gateway" options="-parameters" />
       <module name="WalletBankService" options="-parameters" />
       <module name="base-domains" options="-parameters" />
     </option>
