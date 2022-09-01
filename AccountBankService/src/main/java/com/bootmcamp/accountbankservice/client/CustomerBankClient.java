@@ -12,7 +12,7 @@ public class CustomerBankClient
 {
     private final WebClient webClient;
 //    ${customer-bank.uri}
-    public CustomerBankClient(@Value("local.com") String url)
+    public CustomerBankClient(@Value("${customer-bank.uri}") String url)
     {
         this.webClient = WebClient.builder()
                 .baseUrl(url)

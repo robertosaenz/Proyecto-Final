@@ -8,8 +8,10 @@ import com.bootmcamp.accountbankservice.dto.PersonalCustomerBankDto;
 import com.bootmcamp.accountbankservice.entity.*;
 import com.bootmcamp.accountbankservice.repository.*;
 import com.bootmcamp.accountbankservice.service.AccountBankService;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -20,7 +22,7 @@ import reactor.core.publisher.Mono;
 
 import java.util.ArrayList;
 import java.util.stream.Collectors;
-
+@RefreshScope
 @Service
 public class AccountBankServiceImpl implements AccountBankService
 {
@@ -107,6 +109,7 @@ public class AccountBankServiceImpl implements AccountBankService
         return accountBankRepository.delete(accountBank);
     }
 
+    @CircuitBreaker(name="customerService",fallbackMethod = "movementServiceFallback")
     @Override
     public Mono<?> saveAccountBank(String accountype,Mono<AccountBankDto> accountBankDtoMono)
     {
