@@ -10,7 +10,40 @@
 			"item": [
 				{
 					"name": "Saving",
-					"item": []
+					"item": [
+						{
+							"name": "Get All",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "Get by ID",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					]
 				},
 				{
 					"name": "FixedTerm",
@@ -27,7 +60,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"customerBankDto\":\r\n    {\r\n        \"name\":\"demo ahorro\",\r\n        \"identDoc\":\"9876\",\r\n        \"customerType\":\"personal\"\r\n    },\r\n    \"commonAccountBank\":\r\n    {\r\n        \"balance\":150.0,\r\n        \"transactions\":[\"r\",\"t\"]\r\n    },\r\n    \"listCommonAccountBank\":\r\n    [\r\n            {\r\n                \"balance\":19.0,\r\n                \"transactions\":[\"dj\",\"g\"]\r\n            },\r\n            {\r\n                \"balance\":19.0,\r\n                \"transactions\":[\"f\",\"g\"]\r\n            }\r\n    ],\r\n    \"savingAccountBank\":\r\n    {\r\n        \"balance\":13.0,\r\n        \"transactions\":[\"d\",\"e\"]\r\n\r\n    },\r\n    \"fixedTermAccountBank\":\r\n    {\r\n        \"balance\":13.0,\r\n        \"transactions\":[\"e\",\"f\"]\r\n    }\r\n}",
+							"raw": "{\r\n    \"customerBankDto\":\r\n    {\r\n        \"name\":\"demo ahorro\",\r\n        \"identDoc\":\"987600000\",\r\n        \"customerType\":\"personal\"\r\n    },\r\n    \"commonAccountBank\":\r\n    {\r\n        \"balance\":150.0,\r\n        \"transactions\":[\"r\",\"t\"]\r\n    },\r\n    \"listCommonAccountBank\":\r\n    [\r\n            {\r\n                \"balance\":19.0,\r\n                \"transactions\":[\"dj\",\"g\"]\r\n            },\r\n            {\r\n                \"balance\":19.0,\r\n                \"transactions\":[\"f\",\"g\"]\r\n            }\r\n    ],\r\n    \"savingAccountBank\":\r\n    {\r\n        \"balance\":13.0,\r\n        \"transactions\":[\"d\",\"e\"]\r\n\r\n    },\r\n    \"fixedTermAccountBank\":\r\n    {\r\n        \"balance\":13.0,\r\n        \"transactions\":[\"e\",\"f\"]\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -35,12 +68,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:1001/api/accountbank/ahorro",
+							"raw": "http://localhost:8085/api/accountbank/ahorro",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "1001",
+							"port": "8085",
 							"path": [
 								"api",
 								"accountbank",
@@ -61,12 +94,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:1001/api/accountbank/transaction",
+							"raw": "http://localhost:8085/api/accountbank/transaction",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "1001",
+							"port": "8085",
 							"path": [
 								"api",
 								"accountbank",
@@ -82,12 +115,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:1001/api/accountbank/transaction/62fc03157cf7f34c907884ff",
+							"raw": "http://localhost:8085/api/accountbank/transaction/62fc03157cf7f34c907884ff",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "1001",
+							"port": "8085",
 							"path": [
 								"api",
 								"accountbank",
@@ -113,12 +146,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:1001/api/accountbank/transaction/62fc03157cf7f34c907884ff",
+							"raw": "http://localhost:8085/api/accountbank/transaction/62fc03157cf7f34c907884ff",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "1001",
+							"port": "8085",
 							"path": [
 								"api",
 								"accountbank",
@@ -135,12 +168,12 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:1001/api/accountbank/transaction/62fc03157cf7f34c907884ff",
+							"raw": "http://localhost:8085/api/accountbank/transaction/62fc03157cf7f34c907884ff",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "1001",
+							"port": "8085",
 							"path": [
 								"api",
 								"accountbank",
@@ -166,12 +199,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:1001/api/accountbank/transaction/withdrawal",
+							"raw": "http://localhost:8085/api/accountbank/transaction/withdrawal",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "1001",
+							"port": "8085",
 							"path": [
 								"api",
 								"accountbank",
@@ -197,12 +230,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:1001/api/accountbank/transaction/deposit",
+							"raw": "http://localhost:8085/api/accountbank/transaction/deposit",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "1001",
+							"port": "8085",
 							"path": [
 								"api",
 								"accountbank",

@@ -7,9 +7,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
-import reactor.core.publisher.Mono;
-
-import java.util.function.Function;
 
 @Service
 public class BootcoinTransactionConsumer
@@ -22,9 +19,18 @@ public class BootcoinTransactionConsumer
             topics = "${spring.kafka.topic.name}"
             ,groupId = "${spring.kafka.consumer.group-id}"
     )
-    public void consume(BootcoinTransactionEvent event){
+    public void consume(BootcoinTransactionEvent event)
+    {
         LOGGER.info(String.format("Transaction event received in wallet service => %s", event.toString()));
 
+        BootcoinWallet bootcoinWallet = new BootcoinWallet();
+        bootcoinWallet.setId(event.getBootcoinTransactionDto().getId());
+        bootcoinWallet.setTransmitter(event.getBootcoinTransactionDto().getTransmitter());
+        bootcoinWallet.setReceiver(event.getBootcoinTransactionDto().getReceiver());
+        bootcoinWallet.setAmount(event.getBootcoinTransactionDto().getAmount());
+        bootcoinWallet.setStatus(event.getBootcoinTransactionDto().getStatus());
+
+        bootcoinWalletRepository.save(bootcoinWallet);
 //        Mono<BootcoinWallet> bootcoinWalletMono = null;
 //
 //        Function<BootcoinWallet, BootcoinWallet> updateWallet = (b) ->

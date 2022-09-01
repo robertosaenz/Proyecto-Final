@@ -1,6 +1,9 @@
 server:
     port: 7001
 spring:
+    redis:
+        host: localhost
+        port: 6379
     kafka:
         consumer:
             auto-offset-reset: earliest

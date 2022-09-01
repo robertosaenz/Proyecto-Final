@@ -8,10 +8,10 @@
         <option value="$PROJECT_DIR$/CreditBankService/pom.xml" />
         <option value="$PROJECT_DIR$/BootcoinBankService/pom.xml" />
         <option value="$PROJECT_DIR$/base-domains/pom.xml" />
-        <option value="$PROJECT_DIR$/WalletBankService/pom.xml" />
         <option value="$PROJECT_DIR$/ConfigServer/pom.xml" />
         <option value="$PROJECT_DIR$/DiscoveryServer/pom.xml" />
         <option value="$PROJECT_DIR$/GatewayServer/pom.xml" />
+        <option value="$PROJECT_DIR$/WalletBankService/pom.xml" />
       </list>
     </option>
   </component>

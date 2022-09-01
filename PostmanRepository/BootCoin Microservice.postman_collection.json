@@ -12,7 +12,20 @@
 					"name": "Get All",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7000/api/bootcointransaction/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"bootcointransaction",
+								""
+							]
+						}
 					},
 					"response": []
 				},
@@ -22,7 +35,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:7000/api/bootcointransaction/630f21ee502e1c04c88c6874",
+							"raw": "http://localhost:7000/api/bootcointransaction/6311047a88974732f4a4ffe9",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -31,7 +44,7 @@
 							"path": [
 								"api",
 								"bootcointransaction",
-								"630f21ee502e1c04c88c6874"
+								"6311047a88974732f4a4ffe9"
 							]
 						}
 					},
@@ -42,8 +55,17 @@
 					"request": {
 						"method": "PUT",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": 2.0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "http://localhost:7000/api/bootcointransaction/630f21ee502e1c04c88c6874",
+							"raw": "http://localhost:7000/api/bootcointransaction/630f9368942e85774770f33f",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -52,7 +74,7 @@
 							"path": [
 								"api",
 								"bootcointransaction",
-								"630f21ee502e1c04c88c6874"
+								"630f9368942e85774770f33f"
 							]
 						}
 					},
@@ -91,10 +113,21 @@
 				{
 					"name": "Finish Transaction",
 					"request": {
-						"method": "GET",
+						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": ""
+							"raw": "http://localhost:7000/api/bootcointransaction/finish/630f9368942e85774770f33f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"bootcointransaction",
+								"finish",
+								"630f9368942e85774770f33f"
+							]
 						}
 					},
 					"response": []
