@@ -37,7 +37,7 @@ spring:
 #      default-zone: http://localhost:8761/eureka/
 
 customer-bank:
-    uri: http://localhost:1000/api/
+    uri: http://localhost:8086/api/
 #server:
 #    port: 1001
 #spring:

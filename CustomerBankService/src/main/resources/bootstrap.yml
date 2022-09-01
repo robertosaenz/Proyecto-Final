@@ -1,0 +1,15 @@
+spring:
+    application:
+        name: customerbank
+    cloud:
+        config:
+            uri: http://localhost:8084
+            #      name: accountbank
+            #      discovery:
+            #        enabled: true
+            #        service-id: config
+            username: root
+            password: p4ssword
+    data:
+        mongodb:
+            uri: mongodb://localhost:27017/CustomerBank
