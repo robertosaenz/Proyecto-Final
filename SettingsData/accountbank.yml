@@ -1,14 +1,20 @@
+# server:
+#   port: 8085
+# spring:
+#   application:
+#     name: accountbank
+# eureka:
+#   renewalPercenThreshold: 0.85
+#   instance:
+#     hostname: localhost
+#   client:
+#     region: default
+#     service-url:
+#       default-zone: http://localhost:8761/eureka/
+#     registry-fetch-interval-seconds: 5
 server:
   port: 8085
-spring:
-  application:
-    name: accountbank
 eureka:
-  renewalPercenThreshold: 0.85
-  instance:
-    hostname: localhost
   client:
-    region: default
     service-url:
-      default-zone: http://localhost:8761/eureka/
-    registry-fetch-interval-seconds: 5
+      defaultZone: http://localhost:8761/eureka

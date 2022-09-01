@@ -7,12 +7,12 @@ spring:
     config:
       discovery:
         service-id: config
-eureka:
-  renewalPercenThreshold: 0.85
-  instance:
-    hostname: localhost
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
-    registerWithEureka: false
-    fetchRegistry: false 
+#eureka:
+#  renewalPercenThreshold: 0.85
+#  instance:
+#    hostname: localhost
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka/
+#    registerWithEureka: false
+#    fetchRegistry: false

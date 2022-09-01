@@ -8,17 +8,20 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="base-domains" />
-        <module name="CustomerBankService" />
+        <module name="DiscoveryServer" />
         <module name="CreditBankService" />
-        <module name="WalletBankService" />
         <module name="AccountBankService" />
         <module name="BootcoinBankService" />
+        <module name="ConfigServer" />
+        <module name="CustomerBankService" />
+        <module name="WalletBankService" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="AccountBankService" target="1.8" />
       <module name="base-domains" target="1.8" />
       <module name="BootcoinBankService" target="1.8" />
+      <module name="ConfigServer" target="1.8" />
       <module name="CreditBankService" target="1.8" />
       <module name="CustomerBankService" target="1.8" />
       <module name="DiscoveryServer" target="1.8" />
@@ -30,6 +33,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="AccountBankService" options="-parameters" />
       <module name="BootcoinBankService" options="-parameters" />
+      <module name="ConfigServer" options="-parameters" />
       <module name="CreditBankService" options="-parameters" />
       <module name="CustomerBankService" options="-parameters" />
       <module name="DiscoveryServer" options="-parameters" />

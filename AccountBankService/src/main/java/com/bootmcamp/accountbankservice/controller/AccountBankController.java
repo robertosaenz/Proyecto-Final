@@ -25,8 +25,6 @@ public class AccountBankController
 {
     @Autowired
     private AccountBankService accountBankService;
-    @Autowired
-    private AccountBankTypeService accountBankTypeService;
 
     @GetMapping
     public Mono<ResponseEntity<Flux<AccountBank>>> GetAllAccountBank()
@@ -200,6 +198,5 @@ public class AccountBankController
     {
         return accountBankService.saveAccountBank(accountype,accountBankRequestMono);
     }
-
 
 }

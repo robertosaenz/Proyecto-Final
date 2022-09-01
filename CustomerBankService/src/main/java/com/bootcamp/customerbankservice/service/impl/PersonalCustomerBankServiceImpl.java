@@ -15,13 +15,36 @@ public class PersonalCustomerBankServiceImpl implements PersonalCustomerBankServ
     private PersonalCustomerBankRepository personalCustomerBankRepository;
 
     @Override
-    public Flux<PersonalCustomerBank> findAll() {
+    public Flux<PersonalCustomerBank> findAll()
+    {
         return personalCustomerBankRepository.findAll();
     }
 
     @Override
-    public Mono<PersonalCustomerBank> findById(String Id) {
+    public Mono<PersonalCustomerBank> findById(String Id)
+    {
         return personalCustomerBankRepository.findById(Id);
+    }
+
+    @Override
+    public Mono<PersonalCustomerBank> update(String Id,PersonalCustomerBank personalCustomerBank)
+    {
+        Mono<PersonalCustomerBank> personalCustomerBankMono = personalCustomerBankRepository.findById(Id);
+
+        return personalCustomerBankMono.flatMap(personalCustomerBank1 ->
+        {
+            personalCustomerBank1.setName(personalCustomerBank.getName());
+            personalCustomerBank1.setIdentDoc(personalCustomerBank.getIdentDoc());
+            personalCustomerBank1.setCommonAccountBank(personalCustomerBank.getCommonAccountBank());
+            personalCustomerBank1.setFixedTermAccountBank(personalCustomerBank.getFixedTermAccountBank());
+            personalCustomerBank1.setSavingAccountBank(personalCustomerBank.getSavingAccountBank());
+            return personalCustomerBankRepository.save(personalCustomerBank1);
+        });
+    }
+
+    @Override
+    public Mono<PersonalCustomerBank> save(PersonalCustomerBank personalCustomerBank) {
+        return personalCustomerBankRepository.save(personalCustomerBank);
     }
 
     @Override

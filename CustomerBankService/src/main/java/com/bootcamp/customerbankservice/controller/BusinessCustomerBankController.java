@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import javax.validation.Valid;
+
 @RestController
 @RequestMapping("/api/customer/business")
 public class BusinessCustomerBankController
@@ -39,21 +41,18 @@ public class BusinessCustomerBankController
                 .defaultIfEmpty(ResponseEntity.notFound().build());
     }
 
-    //    @PutMapping("/{id}")
-//    public Mono<ResponseEntity<PersonalCustomerBank>> UpdatePersonalCustomer(@RequestBody PersonalCustomerBank personalCustomerBank, @PathVariable String id)
-//    {
-//        return personalCustomerBankService.findById(id).flatMap
-//                        (
-//                                c->
-//                                {
-//                                    c.setName(customerType.getName());
-//                                    return customerTypeService.save(c);
-//                                }
-//                        ).map(c-> ResponseEntity.created(URI.create("/api/customer/customertype/".concat(c.getId())))
-//                        .contentType(MediaType.APPLICATION_JSON)
-//                        .body(c))
-//                .defaultIfEmpty(ResponseEntity.notFound().build());
-//    }
+    @PutMapping("/{Id}")
+    public Mono<ResponseEntity<BusinessCustomerBank>> UpdateBusinessCustomer(@PathVariable String Id, @Valid @RequestBody BusinessCustomerBank businessCustomerBank)
+    {
+        return businessCustomerBankService.update(Id,businessCustomerBank)
+                .map(businessCustomerBank1 ->
+                        ResponseEntity
+                                .ok().
+                                contentType(MediaType.APPLICATION_JSON)
+                                .body(businessCustomerBank1))
+                .defaultIfEmpty(ResponseEntity.notFound().build());
+
+    }
 
     @DeleteMapping("/{id}")
     public Mono<ResponseEntity<Void>> DeleteBusinessCustomer(@PathVariable String id)
@@ -65,5 +64,16 @@ public class BusinessCustomerBankController
                             return businessCustomerBankService.delete(c).then(Mono.just(new ResponseEntity<Void>(HttpStatus.NO_CONTENT)));
                         }
                 ).defaultIfEmpty(new ResponseEntity<Void>(HttpStatus.NOT_FOUND));
+    }
+    @PostMapping
+    public Mono<ResponseEntity<BusinessCustomerBank>> SaveBusinessCustomer(@Valid @RequestBody BusinessCustomerBank businessCustomerBank)
+    {
+        return businessCustomerBankService.save(businessCustomerBank)
+                .map(businessCustomerBank1 ->
+                        ResponseEntity
+                                .ok().
+                                contentType(MediaType.APPLICATION_JSON)
+                                .body(businessCustomerBank1))
+                .defaultIfEmpty(ResponseEntity.notFound().build());
     }
 }
