@@ -20,7 +20,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/accountbank/cpmmon")
+@RequestMapping("/api/accountbank/common")
 public class CommonAccountBankController
 {
     @Autowired

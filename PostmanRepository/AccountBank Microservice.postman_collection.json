@@ -15,7 +15,199 @@
 							"name": "Get All",
 							"request": {
 								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8085/api/accountbank/saving",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"api",
+										"accountbank",
+										"saving"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8085/api/accountbank/saving/62fedf35f568b67ac1582486",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"api",
+										"accountbank",
+										"saving",
+										"62fedf35f568b67ac1582486"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
 								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8085/api/accountbank/saving/62fedf35f568b67ac1582486",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"api",
+										"accountbank",
+										"saving",
+										"62fedf35f568b67ac1582486"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "FixedTerm",
+					"item": [
+						{
+							"name": "Get All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8085/api/accountbank/fixed",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"api",
+										"accountbank",
+										"fixed"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8085/api/accountbank/fixed/62fedf35f568b67ac1582486",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"api",
+										"accountbank",
+										"fixed",
+										"62fedf35f568b67ac1582486"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"balance\": 12.0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8085/api/accountbank/fixed/62fedf35f568b67ac1582486",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"api",
+										"accountbank",
+										"fixed",
+										"62fedf35f568b67ac1582486"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8085/api/accountbank/fixed/62fedf35f568b67ac1582486",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"api",
+										"accountbank",
+										"fixed",
+										"62fedf35f568b67ac1582486"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Common",
+					"item": [
+						{
+							"name": "Get All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8085/api/accountbank/common",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"api",
+										"accountbank",
+										"common"
+									]
+								}
 							},
 							"response": []
 						},
@@ -30,28 +222,34 @@
 						{
 							"name": "Update",
 							"request": {
-								"method": "GET",
+								"method": "PUT",
 								"header": []
 							},
 							"response": []
 						},
 						{
-							"name": "New Request",
+							"name": "Delete",
 							"request": {
-								"method": "GET",
-								"header": []
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8085/api/accountbank/common/62fedf35f568b67ac1582486",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"api",
+										"accountbank",
+										"common",
+										"62fedf35f568b67ac1582486"
+									]
+								}
 							},
 							"response": []
 						}
 					]
-				},
-				{
-					"name": "FixedTerm",
-					"item": []
-				},
-				{
-					"name": "Common",
-					"item": []
 				},
 				{
 					"name": "Create by type",
